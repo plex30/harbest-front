@@ -6,7 +6,7 @@ import './HomePage.scss'
 export default function HomePage() {
     return ( 
     <>
-    <img src={logo} alt="logo" className="logo"></img>
+    <img src={logo} alt="logo" className="logo"/>
     <div className="square-1"></div>
     <div className="c-home">
         <Link className="c-home__link" to="/products">Listado de productos</Link>
