@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import { API } from '../../../shared/const/api.const';
+import './AddProductModal.scss'
 
 export default function AddProductModal({modal, toggle}) {
 
@@ -63,28 +64,29 @@ export default function AddProductModal({modal, toggle}) {
     return (
         <Modal isOpen={modal} toggle={toggle}>
                         <ModalHeader toggle={toggle} className="modalMenu">Añadir Producto</ModalHeader>
-                        <ModalBody>
                         <Form onSubmit={onHandleSubmit}>
+                        <ModalBody>
                         <Label>Imagen:</Label>
-                        <Input type="text" onChange={onChangeImg}></Input>
+                        <Input type="text" onChange={onChangeImg} placeholder="ej: https://www.unplashc.com/pepino.jpg" required></Input>
                         <Label>Nombre:</Label>
-                        <Input type="text" onChange={onChangeName}></Input>
+                        <Input type="text" onChange={onChangeName} placeholder="ej: Acelga Roja Ecológica (Caja de 3 kgs) (2.00€/kg)" required></Input>
                         <Label>Precio:</Label>
-                        <Input type="text" onChange={onChangePrice}></Input>
+                        <Input type="text" onChange={onChangePrice} placeholder="ej: 6.00€ “IVA Excl.”" required></Input>
                         <Label>Agricultor:</Label>
-                        <Input type="text" onChange={onChangeFarmer}></Input>
-                        <Label>Estado:</Label>
-                        <Input type="text" onChange={onChangeState}></Input>
+                        <Input type="text" onChange={onChangeFarmer} placeholder="ej: Mariano García de Estremera (Madrid)." required></Input>
+                        <Label>Estado: (activo o oculto)</Label>
+                        <Input type="text" onChange={onChangeState} placeholder="ej: activo o oculto" required></Input>
                         <Label>Descripition:</Label>
-                        <Input type="textarea" onChange={onChangeDescription}></Input>
-                        <button color="primary" type="submit">Añadir</button>{' '}
-                        </Form>
+                        <Input type="textarea" onChange={onChangeDescription} placeholder="ej: Acelgas de penca fina, recién recolectadas en la huerta madrileña." required></Input>
+                        
+                       
                           
                         </ModalBody>
                         <ModalFooter>
-                        
-                        <button color="secondary" onClick={toggle}>Cancelar</button>
+                        <button color="primary" type="submit" className="btn-modal-add">Añadir</button>{' '}
+                        <button color="secondary" onClick={toggle} className="btn-cancel">Cancelar</button>
                         </ModalFooter>
+                        </Form>
                     </Modal>
     )
 }

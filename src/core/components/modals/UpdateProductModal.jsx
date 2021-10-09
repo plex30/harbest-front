@@ -63,31 +63,33 @@ export default function UpdateProductModal({ modal, toggle, product }) {
     return (
         product && <Modal isOpen={modal} toggle={toggle}>
             <ModalHeader toggle={toggle} className="modalMenu">Editar Producto</ModalHeader>
+            <Form onSubmit={onHandleSubmit}>
             <ModalBody>
                 <img src={product.img} alt="product" className="update-modal-img"/>
-                <Form onSubmit={onHandleSubmit}>
+                
                     
                     <Label>Imagen:</Label>
                     
-                    <Input type="text" defaultValue={product.img} onChange={onChangeImg}></Input>
+                    <Input type="text" defaultValue={product.img} onChange={onChangeImg} required></Input>
                     <Label>Nombre:</Label>
-                    <Input type="text" defaultValue={product.name} onChange={onChangeName} name="name" id="name"></Input>
+                    <Input type="text" defaultValue={product.name} onChange={onChangeName} required></Input>
                     <Label>Precio:</Label>
-                    <Input type="text" defaultValue={product.price} onChange={onChangePrice}></Input>
+                    <Input type="text" defaultValue={product.price} onChange={onChangePrice} required></Input>
                     <Label>Agricultor:</Label>
-                    <Input type="text" defaultValue={product.farmer} onChange={onChangeFarmer}></Input>
+                    <Input type="text" defaultValue={product.farmer} onChange={onChangeFarmer} required></Input>
                     <Label>Estado:</Label>
-                    <Input type="text" defaultValue={product.state} onChange={onChangeState} ></Input>
+                    <Input type="text" defaultValue={product.state} onChange={onChangeState} required></Input>
                     <Label>Descripition:</Label>
-                    <Input type="textarea" defaultValue={product.description} onChange={onChangeDescription} ></Input>
-                    <button color="primary" type="submit">Editar</button>{' '}
-                </Form>
+                    <Input type="textarea" defaultValue={product.description} onChange={onChangeDescription} required></Input>
+                    
+               
 
             </ModalBody>
             <ModalFooter>
-
-                <button color="secondary" onClick={toggle}>Cancelar</button>
+                <button color="primary" type="submit" className="btn-modal-edit">Editar</button>{' '}
+                <button color="secondary" onClick={toggle} className="btn-modal-cancel">Cancelar</button>
             </ModalFooter>
+            </Form>
         </Modal>
     )
 }

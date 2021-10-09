@@ -61,7 +61,10 @@ export default function LayoutCardProduct(props) {
                         <CardTitle tag="h5">{product.name}</CardTitle>
                         <CardSubtitle tag="h6" className="mb-2 text-muted">{product.price}</CardSubtitle>
                         <CardText style={{height: '80px'}}>{product.description}</CardText>
+                        <span>Agricultor: </span><CardSubtitle tag="h7" className="mb-2">{product.farmer}</CardSubtitle>
+                        {product.state === 'activo' ? <p className="add-state-active">{product.state}</p> : <p className="add-state-hidden">{product.state}</p>}
                         <div className="container-btn">
+                        
                         <Button onClick={()=>toggleModal(product)} className="btn-edit">Editar</Button>
                         <Button onClick={onHandleDelete} className="btn-delete">Eliminar</Button>
                         </div>
