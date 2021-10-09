@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useContext } from 'react/cjs/react.development'
+import { GlobalDispatchContext, GlobalStateContext } from '../../context/GlobalContext'
+import { API } from '../../shared/const/api.const'
 import logo from './../../assets/harbest-market-1.png'
 import './HomePage.scss'
 

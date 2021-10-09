@@ -9,6 +9,7 @@ export default function AddProductModal({modal, toggle}) {
     const [farmer, setFarmer]= useState(null)
     const [state, setState]= useState(null)
     const [description, setDescription]= useState(null)
+    const [img, setImg]= useState(null)
 
     const onChangeName = (e)=>{
         if (e.target.value) setName(e.target.value);
@@ -30,8 +31,12 @@ export default function AddProductModal({modal, toggle}) {
         if (e.target.value) setDescription(e.target.value);
     }
 
+    const onChangeImg = (e)=>{
+        if (e.target.value) setImg(e.target.value);
+    }
+
     const onHandleSubmit = (e)=>{
-      e.preventDefault()
+      
       /* const data = new FormData();
       data.append('name', name)
       data.append('price', price)
@@ -40,24 +45,26 @@ export default function AddProductModal({modal, toggle}) {
       data.append('description', description)
       console.log(data); */
 
-      const data ={
-          'name': name,
-          'price': price,
-          'farmer': farmer,
-          'state': state,
-          'description': description
-      }
+        const data = {
+            'name': name,
+            'price': price,
+            'farmer': farmer,
+            'state': state,
+            'description': description,
+            'img': img
+        }
 
-      API.post('/products', data,{
-        
+        API.post('/products', data, {
+
             headers: {
                 'Accept': 'application/json',
-        'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
             }
-        
-      }).then(res=>{
-          console.log(res);
-      })
+
+        }).then(res => {
+            console.log(res);
+            e.preventDefault()
+        })
     }
 
     
@@ -66,6 +73,8 @@ export default function AddProductModal({modal, toggle}) {
                         <ModalHeader toggle={toggle} className="modalMenu">Añadir Producto</ModalHeader>
                         <ModalBody>
                         <Form onSubmit={onHandleSubmit}>
+                        <Label>Imagen:</Label>
+                        <Input type="text" onChange={onChangeImg}></Input>
                         <Label>Nombre:</Label>
                         <Input type="text" onChange={onChangeName}></Input>
                         <Label>Precio:</Label>
