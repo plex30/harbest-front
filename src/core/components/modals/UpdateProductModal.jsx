@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { Form, Input, Label, ModalBody, ModalFooter, ModalHeader, Modal } from 'reactstrap'
 import { API } from '../../../shared/const/api.const'
-
+import './UpdateProductModal.scss'
 
 export default function UpdateProductModal({ modal, toggle, product }) {
     const [name, setName] = useState(product.name)
@@ -64,7 +64,7 @@ export default function UpdateProductModal({ modal, toggle, product }) {
         product && <Modal isOpen={modal} toggle={toggle}>
             <ModalHeader toggle={toggle} className="modalMenu">Editar Producto</ModalHeader>
             <ModalBody>
-                <img src={product.img} alt="product"/>
+                <img src={product.img} alt="product" className="update-modal-img"/>
                 <Form onSubmit={onHandleSubmit}>
                     
                     <Label>Imagen:</Label>

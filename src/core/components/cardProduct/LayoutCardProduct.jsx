@@ -6,6 +6,7 @@ import { Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle, Dro
 import Pagination from "react-js-pagination";
 import { API } from '../../../shared/const/api.const'
 import 'bootstrap/dist/css/bootstrap.css';
+import './LayoutCardProduct.scss'
 
 
 export default function LayoutCardProduct(props) {
@@ -53,27 +54,17 @@ export default function LayoutCardProduct(props) {
 
     return (
         <>
-       {/*  {<Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                <DropdownToggle caret>
-                    Filtrar
-                </DropdownToggle>
-                <DropdownMenu>
-                    <DropdownItem onClick={onChangeState}>Quitar filtros</DropdownItem>
-                    <DropdownItem onClick={onChangeState} id="activo">Productos Activos</DropdownItem>
-                    <DropdownItem onClick={onChangeState} id="oculto">Productos Ocultos</DropdownItem>
-                </DropdownMenu>
-            </Dropdown>}
-             */}
-            
-            {product && <p>holoa</p> &&
-                 <Card >
-                    <CardImg top width="100%" src={product.img} style={{width: '200px'}} alt="Card image cap" />
+            {product &&
+                 <Card style={{width: '350px', margin:'1rem'}}>
+                    <CardImg top width="100%" src={product.img}  alt="Card image cap" style={{height: '250px'}}/>
                     <CardBody>
                         <CardTitle tag="h5">{product.name}</CardTitle>
                         <CardSubtitle tag="h6" className="mb-2 text-muted">{product.price}</CardSubtitle>
-                        <CardText>{product.description}</CardText>
-                        <Button onClick={()=>toggleModal(product)}>Editar</Button>
-                        <Button onClick={onHandleDelete}>Eliminar</Button>
+                        <CardText style={{height: '80px'}}>{product.description}</CardText>
+                        <div className="container-btn">
+                        <Button onClick={()=>toggleModal(product)} className="btn-edit">Editar</Button>
+                        <Button onClick={onHandleDelete} className="btn-delete">Eliminar</Button>
+                        </div>
                     </CardBody>
                 </Card>
             }

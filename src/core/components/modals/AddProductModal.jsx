@@ -37,15 +37,7 @@ export default function AddProductModal({modal, toggle}) {
 
     const onHandleSubmit = (e)=>{
       
-      /* const data = new FormData();
-      data.append('name', name)
-      data.append('price', price)
-      data.append('farmer', farmer)
-      data.append('state', state)
-      data.append('description', description)
-      console.log(data); */
-
-        const data = {
+       const data = {
             'name': name,
             'price': price,
             'farmer': farmer,

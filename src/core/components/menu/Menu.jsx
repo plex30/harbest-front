@@ -4,7 +4,7 @@ import AddProductModal from '../modals/AddProductModal';
 import { Dropdown, DropdownItem, DropdownMenu, DropdownToggle } from 'reactstrap'
 import logo from './../../../assets/harbest-market-1.png'
 import { GlobalDispatchContext, GlobalStateContext } from '../../../context/GlobalContext';
-
+import './Menu.scss'
 
 export default function Menu({ setProducts, products, getProducts }) {
 
@@ -31,16 +31,20 @@ export default function Menu({ setProducts, products, getProducts }) {
 
     }
     return (
-        <div>
+        <div className="c-menu">
             <div className="wrapper">
                 <div className="container-fluid">
                     <header className="header">
-                        <img src={logo} alt="logo" />
+                        <img src={logo} alt="logo" className="logo-menu"/>
                     </header>
-                    <button onClick={toggle}>Añadir producto</button>
+                    <button onClick={toggle} className="btn-menu">+ Añadir producto</button>
                     <AddProductModal modal={modal} toggle={toggle}></AddProductModal>
-                    {<Dropdown isOpen={dropdownOpen} toggle={toggleDrop}>
-                        <DropdownToggle caret>
+                    
+                </div>
+                
+            </div>
+            {<Dropdown isOpen={dropdownOpen} toggle={toggleDrop}>
+                        <DropdownToggle caret style={{background: 'none', color: '#1c4c23', marginLeft: '2rem', fontWeight: '900', marginTop: '1rem'}}>
                             Filtrar
                         </DropdownToggle>
                         <DropdownMenu>
@@ -49,9 +53,6 @@ export default function Menu({ setProducts, products, getProducts }) {
                             <DropdownItem onClick={onChangeState} id="oculto">Productos Ocultos</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>}
-                </div>
-            </div>
-
         </div>
     )
 }
