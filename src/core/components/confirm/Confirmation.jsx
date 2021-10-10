@@ -16,6 +16,8 @@ class Confirmation extends React.Component {
       proceed,
       enableEscape = true
     } = this.props;
+
+    console.log(this.props);
     return (
       <div className="static-modal">
         <Modal

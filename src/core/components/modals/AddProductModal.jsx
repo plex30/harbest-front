@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Form, FormGroup, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
+import {Form, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import { API } from '../../../shared/const/api.const';
 import './AddProductModal.scss'
 

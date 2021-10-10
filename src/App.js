@@ -4,13 +4,11 @@ import {
 } from "react-router-dom";
 import Routes from './core/components/Routes';
 import GlobalContextProvider, { GlobalDispatchContext, GlobalStateContext } from './context/GlobalContext';
-import Pagination from './core/components/pagination/Pagination';
-import ProductsPage from './pages/products/ProductsPage';
-import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  const [posts, setPosts] = useState([]);
+
   return (
     <GlobalContextProvider>
       <GlobalStateContext.Consumer>

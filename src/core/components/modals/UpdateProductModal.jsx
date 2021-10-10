@@ -5,12 +5,13 @@ import { API } from '../../../shared/const/api.const'
 import './UpdateProductModal.scss'
 
 export default function UpdateProductModal({ modal, toggle, product }) {
+    
     const [name, setName] = useState(product.name)
     const [price, setPrice] = useState(product.price)
     const [farmer, setFarmer] = useState(product.farmer)
     const [state, setState] = useState(product.state)
     const [description, setDescription] = useState(product.description)
-    const [img, setImg] = useState(product.img ? product.img : null)
+    const [img, setImg] = useState(product.img)
 
     const onChangeName = (e) => {
         if (e.target.value) setName(e.target.value);
@@ -55,9 +56,8 @@ export default function UpdateProductModal({ modal, toggle, product }) {
                 'Content-Type': 'application/json',
             }
 
-        }).then(res => {
-            console.log(res);
-         
+        }).then(async(res) => {
+             window.location.reload(false)  
         })
     }
     return (
