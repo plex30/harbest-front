@@ -12,7 +12,6 @@ export default function HomePage() {
     return ( 
     <div className="app">
     <img src={logo} alt="logo" className="logo slide-in-top"/>
-    {/* <div className="square-1"></div> */}
     <div className="c-home">
     <div className="c-img">
         <img src={flower} alt="flower" className="c-img__item1 slide-in-left"></img>

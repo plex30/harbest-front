@@ -17,7 +17,6 @@ export default function ProductsPage() {
   const [skip, setSkip] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [modal, setModal] = useState(false);
-  const [state, setState] = useState(null)
   const toggleModal = (product) => { setModal(!modal); setProduct(product) }
 
   const toggleDrop = () => setDropdownOpen(prevState => !prevState);
