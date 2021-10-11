@@ -1,0 +1,140 @@
+.c-products{
+    overflow-x: hidden;
+}
+
+.card-container{
+   margin: 1rem 8rem; 
+}
+
+
+.container-btn{
+    width: 130px;
+    position: relative;
+    margin-left: 13rem;
+    margin-top: 3rem;
+}
+
+
+.btn-edit, .btn-delete{
+    margin: 0.2rem;
+}
+
+.btn-edit{
+       color: #FFF;
+       background-color: #1c4c23;
+       padding: 0.5rem;
+       border: none;
+       border-radius: 4px;
+       font-family: Quicksand;
+       font-weight: 900;
+       font-size: 0.8rem;
+       cursor: pointer;
+       text-decoration: none;
+     
+        &:hover{
+          background-color: white;
+          color: #1c4c23;
+          font-weight: 900;
+        }
+}
+
+.btn-delete{
+    color: #FFF;
+    background-color: red;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-family: Quicksand;
+    font-weight: 900;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+  
+     &:hover{
+       background-color: white;
+       color: red;
+       font-weight: 900;
+     }
+}
+
+.pagination-btn{
+    text-align: center;
+    
+}
+
+.previous-btn-active{
+    border: none;
+    background-color: white;
+    font-weight: 900;
+    color: #1c4c23;
+    font-size: 1.5rem;
+    &::before{
+        content: "< ";
+        
+    }
+}
+
+.previous-btn-disabled{
+    border: none;
+    background-color: white;
+    font-weight: 900;
+    color: #b8b8b8;
+    font-size: 1.5rem;
+    &::before{
+        content: "< ";
+        
+    }
+}
+
+.next-btn-active{
+    border: none;
+    background-color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #E77525;
+    &::after{
+        content: " >";
+        
+    }
+    
+}
+
+.next-btn-disabled{
+    border: none;
+    background-color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: #b8b8b8;
+    &::after{
+        content: " >";
+        
+    }
+    
+}
+
+.add-state-active, .add-state-hidden{
+    position: absolute;
+    top: 0.5rem;
+}
+
+.add-state-active{
+    background-color: rgb(29, 182, 2);;
+    color: white;
+    margin-left: 16.2rem;
+    padding: 0.2rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.add-state-hidden{
+    background-color: rgb(216, 13, 13);
+    color: white;
+    margin-left: 16rem;
+    padding: 0.2rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 900;
+}

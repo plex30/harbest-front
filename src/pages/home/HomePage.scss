@@ -1,0 +1,190 @@
+.logo {
+    display: block;
+    margin: 1.3rem auto;
+}
+
+.logo.slide-in-top {
+	-webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.c-home{
+ 
+    &__link{
+       color: #FFF;
+       background-color: #E77525;
+       padding: 1rem;
+       border: none;
+       border-radius: 8px;
+       font-family: Quicksand;
+       font-weight: 900;
+       font-size: 1.2rem;
+       cursor: pointer;
+       text-decoration: none;
+       position: relative;
+       top: 47rem;
+       left: 100rem;
+
+        &:hover{
+          background-color: #1c4c23;
+          color: white;
+        }
+    }
+}
+
+.c-home__link.slide-in-right {
+	-webkit-animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+	        animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+
+
+
+.c-img{
+  position: absolute;
+  top: 30%;
+  left: 12%; 
+  
+  
+
+ 
+  &__item1{
+    width: 23rem;
+    border-radius: 12px;
+    position: relative;
+    top: 6rem;
+    left: 4rem;
+    z-index: 2;
+
+    
+
+  }
+  &__item2{
+    width: 20rem;
+    border-radius: 12px;
+    position: relative;
+    top: -8rem;
+  }
+  &__item3{
+    width: 25rem;
+    border-radius: 12px;
+    position: relative;
+    right: 17rem;
+    z-index: -1;
+    top: 11rem;
+  }
+  &__item4{
+    width: 22rem;
+    border-radius: 12px;
+    position: relative;
+    right: 26rem;
+    z-index: 0;
+    top: -10rem;
+  }
+  &__item5{
+    width: 30rem;
+    border-radius: 12px;
+    position: relative;
+    left: 48rem;
+  z-index: -1;
+    top: -24rem;
+  }
+}
+
+.c-img__item1.slide-in-left {
+  -webkit-animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
+          animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
+}
+
+.c-img__item2.slide-in-left {
+	-webkit-animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+	        animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+
+.c-img__item3.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.c-img__item4.slide-in-right {
+	-webkit-animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+	        animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+
+.c-img__item5.slide-in-right {
+	-webkit-animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
+	        animation: slide-in-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)  both;
+}
+
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+ @keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+  
+
+@font-face{
+    font-family: Quicksand;
+    src: url(../../assets/fonts/Quicksand-VariableFont_wght.ttf)
+}

@@ -1,0 +1,33 @@
+.logo-menu{
+    width: 300px;
+    margin-top: 1rem;
+}
+
+.btn-menu{
+       color: #FFF;
+       background-color: #E77525;
+       padding: 0.5rem;
+       border: none;
+       border-radius: 8px;
+       font-family: Quicksand;
+       font-weight: 900;
+       font-size: 0.8rem;
+       cursor: pointer;
+       text-decoration: none;
+       margin-left: 85rem;
+       margin-top: 2rem;
+        &:hover{
+          background-color: #1c4c23;
+          color: white;
+        }
+}
+
+.container-fluid{
+    display: flex;
+}
+.modalMenu{
+   button{
+       border: none;
+       background: white;
+   } 
+}
